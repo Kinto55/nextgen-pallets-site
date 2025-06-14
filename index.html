@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextGen Pallets</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2c3e50',
+            accent: '#f39c12',
+            charcoal: '#1c1c1c',
+            glass: 'rgba(44,62,80,0.7)',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            roboto: ['Roboto', 'sans-serif'],
+          },
+          boxShadow: {
+            glow: '0 0 24px 4px #f39c12',
+          },
+        },
+      },
+    }
+  </script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;600;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Swiper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Lightbox2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Roboto', sans-serif; background: #1c1c1c; color: #fff; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+    .font-poppins { font-family: 'Poppins', sans-serif; }
+    .font-roboto { font-family: 'Roboto', sans-serif; }
+    .glass {
+      background: rgba(44,62,80,0.7);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 32px 0 rgba(44,62,80,0.25);
+      border-radius: 1.5rem;
+      border: 1.5px solid rgba(255,255,255,0.12);
+    }
+    .divider {
+      background: linear-gradient(90deg, #2c3e50 0%, #f39c12 100%);
+      height: 5px;
+      border-radius: 9999px;
+      margin: 3rem 0;
+    }
+    .hero-gradient {
+      background: linear-gradient(120deg, #2c3e50 60%, #f39c12 100%);
+    }
+    .gallery-glow {
+      box-shadow: 0 0 24px 4px #f39c12;
+    }
+  </style>
+</head>
+<body class="bg-charcoal text-white">
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full z-30 bg-primary bg-opacity-95 shadow-lg transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="text-2xl font-bold font-poppins tracking-wide flex items-center gap-2">
+        <i class="fas fa-cube text-accent animate-pulse"></i>
+        NextGen Pallets
+      </div>
+      <div class="hidden md:flex space-x-8 text-lg font-roboto">
+        <a href="#home" class="hover:text-accent transition">Home</a>
+        <a href="#services" class="hover:text-accent transition">Services</a>
+        <a href="#gallery" class="hover:text-accent transition">Inventory</a>
+        <a href="#contact" class="hover:text-accent transition">Contact</a>
+      </div>
+      <button id="nav-toggle" class="md:hidden text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="nav-menu" class="md:hidden hidden flex-col bg-primary px-4 pb-4">
+      <a href="#home" class="py-2 hover:text-accent transition">Home</a>
+      <a href="#services" class="py-2 hover:text-accent transition">Services</a>
+      <a href="#gallery" class="py-2 hover:text-accent transition">Inventory</a>
+      <a href="#contact" class="py-2 hover:text-accent transition">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Image Slider -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div id="hero-bg" class="absolute inset-0 w-full h-full transition-all duration-1000" style="background: url('IMG_0249.jpeg') center/cover no-repeat;"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center text-center px-4" data-aos="fade-up">
+      <h1 class="text-5xl md:text-7xl font-bold font-poppins mb-4 drop-shadow-lg animate__animated animate__fadeInDown" style="text-shadow:0 4px 32px #000,0 0 16px #f39c12;">NextGen Pallets</h1>
+      <h2 class="text-2xl md:text-3xl font-poppins font-semibold mb-8 animate__animated animate__fadeInUp" style="text-shadow:0 2px 12px #000">Industrial Strength. On-Demand.</h2>
+      <a href="#contact" class="inline-block bg-accent text-primary font-bold font-poppins text-xl px-10 py-5 rounded-full shadow-lg transform transition hover:scale-110 hover:bg-primary hover:text-accent duration-200 ring-2 ring-accent ring-offset-2 hover:ring-primary hover:ring-offset-4 animate-bounce">Get a Quote</a>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+      <span class="w-3 h-3 rounded-full bg-accent opacity-80" id="dot0"></span>
+      <span class="w-3 h-3 rounded-full bg-white opacity-40" id="dot1"></span>
+      <span class="w-3 h-3 rounded-full bg-white opacity-40" id="dot2"></span>
+      <span class="w-3 h-3 rounded-full bg-white opacity-40" id="dot3"></span>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Services Section -->
+  <section id="services" class="max-w-7xl mx-auto py-20 px-4" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold font-poppins text-center mb-12 text-accent drop-shadow-lg">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="glass flex flex-col items-center p-10 shadow-glow hover:shadow-2xl transition transform hover:scale-105" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-dolly-flatbed text-6xl text-accent mb-4 animate-bounce"></i>
+        <span class="text-2xl font-semibold font-poppins mb-2">Buy Pallets</span>
+        <p class="text-center font-roboto">High-quality pallets for every industry, ready for immediate delivery.</p>
+      </div>
+      <div class="glass flex flex-col items-center p-10 shadow-glow hover:shadow-2xl transition transform hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-exchange-alt text-6xl text-accent mb-4 animate-spin-slow"></i>
+        <span class="text-2xl font-semibold font-poppins mb-2">Sell Pallets</span>
+        <p class="text-center font-roboto">Turn your surplus pallets into cash with our fast, fair buyback program.</p>
+      </div>
+      <div class="glass flex flex-col items-center p-10 shadow-glow hover:shadow-2xl transition transform hover:scale-105" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-truck-moving text-6xl text-accent mb-4 animate-pulse"></i>
+        <span class="text-2xl font-semibold font-poppins mb-2">Fast Delivery</span>
+        <p class="text-center font-roboto">24-hour pickup and delivery turnaround to keep your business moving.</p>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Stats Section -->
+  <section class="bg-gradient-to-r from-primary via-charcoal to-accent py-16" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+      <div class="glass flex flex-col items-center p-8 shadow-glow" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-boxes text-5xl text-accent mb-2 animate-bounce"></i>
+        <div class="text-4xl md:text-5xl font-bold font-poppins mb-1" id="counter1">0</div>
+        <div class="font-roboto">10,000+ Pallets Delivered</div>
+      </div>
+      <div class="glass flex flex-col items-center p-8 shadow-glow" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-users text-5xl text-accent mb-2 animate-pulse"></i>
+        <div class="text-4xl md:text-5xl font-bold font-poppins mb-1" id="counter2">0</div>
+        <div class="font-roboto">500+ Clients Served</div>
+      </div>
+      <div class="glass flex flex-col items-center p-8 shadow-glow" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-clock text-5xl text-accent mb-2 animate-spin-slow"></i>
+        <div class="text-4xl md:text-5xl font-bold font-poppins mb-1" id="counter3">0</div>
+        <div class="font-roboto">24HR Pickup/Delivery Turnaround</div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="max-w-7xl mx-auto py-20 px-4" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold font-poppins text-center mb-12 text-accent drop-shadow-lg">Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <a href="IMG_0249.jpeg" data-lightbox="pallets" class="block overflow-hidden rounded-2xl gallery-glow"><img src="IMG_0249.jpeg" alt="Pallet 1" class="w-full h-56 object-cover hover:scale-110 transition-transform duration-300"></a>
+      <a href="IMG_0250.jpeg" data-lightbox="pallets" class="block overflow-hidden rounded-2xl gallery-glow"><img src="IMG_0250.jpeg" alt="Pallet 2" class="w-full h-56 object-cover hover:scale-110 transition-transform duration-300"></a>
+      <a href="IMG_0251.jpeg" data-lightbox="pallets" class="block overflow-hidden rounded-2xl gallery-glow"><img src="IMG_0251.jpeg" alt="Pallet 3" class="w-full h-56 object-cover hover:scale-110 transition-transform duration-300"></a>
+      <a href="IMG_0252.jpeg" data-lightbox="pallets" class="block overflow-hidden rounded-2xl gallery-glow"><img src="IMG_0252.jpeg" alt="Pallet 4" class="w-full h-56 object-cover hover:scale-110 transition-transform duration-300"></a>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Testimonials Carousel -->
+  <section class="bg-gradient-to-l from-primary via-charcoal to-accent py-20" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold font-poppins text-center mb-12 text-accent drop-shadow-lg">What Our Clients Say</h2>
+    <div class="max-w-3xl mx-auto">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide flex flex-col items-center text-center px-6 glass shadow-glow">
+            <div class="flex mb-2 text-accent text-2xl animate-pulse">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="font-roboto text-lg mb-4">"Fast, reliable, and always top quality. NextGen Pallets keeps our supply chain moving!"</p>
+            <span class="font-poppins font-bold">— Alex R.</span>
+          </div>
+          <div class="swiper-slide flex flex-col items-center text-center px-6 glass shadow-glow">
+            <div class="flex mb-2 text-accent text-2xl animate-pulse">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-roboto text-lg mb-4">"Their pickup and delivery turnaround is unmatched. Highly recommend!"</p>
+            <span class="font-poppins font-bold">— Jamie L.</span>
+          </div>
+          <div class="swiper-slide flex flex-col items-center text-center px-6 glass shadow-glow">
+            <div class="flex mb-2 text-accent text-2xl animate-pulse">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-roboto text-lg mb-4">"Great service and fair prices. We only use NextGen for our pallet needs."</p>
+            <span class="font-poppins font-bold">— Morgan S.</span>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-6"></div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-2xl mx-auto py-20 px-4" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold font-poppins text-center mb-8 text-accent drop-shadow-lg">Contact Us</h2>
+    <form id="contactForm" class="glass rounded-2xl shadow-glow p-10 flex flex-col gap-6">
+      <div class="flex flex-col">
+        <label for="name" class="font-poppins mb-1">Name</label>
+        <input type="text" id="name" name="name" class="rounded px-4 py-2 bg-charcoal text-white focus:outline-none focus:ring-2 focus:ring-accent" required>
+      </div>
+      <div class="flex flex-col">
+        <label for="email" class="font-poppins mb-1">Email</label>
+        <input type="email" id="email" name="email" class="rounded px-4 py-2 bg-charcoal text-white focus:outline-none focus:ring-2 focus:ring-accent" required>
+      </div>
+      <div class="flex flex-col">
+        <label for="phone" class="font-poppins mb-1">Phone</label>
+        <input type="tel" id="phone" name="phone" class="rounded px-4 py-2 bg-charcoal text-white focus:outline-none focus:ring-2 focus:ring-accent" required>
+      </div>
+      <div class="flex flex-col">
+        <label for="message" class="font-poppins mb-1">Message</label>
+        <textarea id="message" name="message" rows="4" class="rounded px-4 py-2 bg-charcoal text-white focus:outline-none focus:ring-2 focus:ring-accent" required></textarea>
+      </div>
+      <button type="submit" class="bg-accent text-primary font-bold font-poppins text-lg px-8 py-3 rounded-full shadow-lg transition transform hover:scale-110 hover:bg-primary hover:text-accent duration-200 ring-2 ring-accent ring-offset-2 hover:ring-primary hover:ring-offset-4">Send Request</button>
+    </form>
+    <div id="formMsg" class="text-center mt-4 font-poppins font-semibold"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary py-8 mt-12">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-bold font-poppins">NextGen Pallets</span>
+      </div>
+      <div class="text-center font-roboto">
+        <span class="block md:inline">info@nextgenpallets.com</span>
+        <span class="hidden md:inline mx-2">|</span>
+        <span class="block md:inline">(555) 123-4567</span>
+      </div>
+      <div class="flex gap-4 text-accent text-2xl">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="text-center text-sm font-roboto mt-4">&copy; 2025 NextGen Pallets. All rights reserved.</div>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.6.2/dist/countUp.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Navbar hamburger toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+          navMenu.classList.add('hidden');
+        }
+      });
+    });
+    // AOS init
+    AOS.init({ once: true, duration: 900 });
+    // CountUp.js for stats
+    window.addEventListener('DOMContentLoaded', () => {
+      const c1 = new CountUp('counter1', 10000, { duration: 2, separator: ',' });
+      const c2 = new CountUp('counter2', 500, { duration: 2 });
+      const c3 = new CountUp('counter3', 24, { duration: 2 });
+      if (!c1.error) c1.start();
+      if (!c2.error) c2.start();
+      if (!c3.error) c3.start();
+    });
+    // Swiper.js for testimonials
+    new Swiper('.swiper', {
+      loop: true,
+      autoplay: { delay: 5000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      slidesPerView: 1,
+      effect: 'slide',
+    });
+    // Contact form validation
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+      this.querySelectorAll('input, textarea').forEach(input => {
+        if (!input.value.trim()) valid = false;
+      });
+        const msg = document.getElementById('formMsg');
+        if (valid) {
+        msg.textContent = 'Thank you! Your request has been received.';
+        msg.className = 'text-green-400 font-poppins font-semibold';
+        this.reset();
+      } else {
+        msg.textContent = 'Please fill in all fields.';
+        msg.className = 'text-red-400 font-poppins font-semibold';
+      }
+    });
+    // Hero image slider (4 images, animated dots)
+    const heroImages = [
+      'IMG_0249.jpeg',
+      'IMG_0250.jpeg',
+      'IMG_0251.jpeg',
+      'IMG_0252.jpeg'
+    ];
+    let current = 0;
+    const heroBg = document.getElementById('hero-bg');
+    const dots = [
+      document.getElementById('dot0'),
+      document.getElementById('dot1'),
+      document.getElementById('dot2'),
+      document.getElementById('dot3')
+    ];
+    setInterval(() => {
+      current = (current + 1) % heroImages.length;
+      heroBg.style.backgroundImage = `url('${heroImages[current]}')`;
+      dots.forEach((dot, i) => {
+        dot.className = `w-3 h-3 rounded-full ${i === current ? 'bg-accent opacity-80' : 'bg-white opacity-40'}`;
+      });
+    }, 3500);
+    // Custom slow spin animation
+    tailwind.config.theme.extend.animation = { ...tailwind.config.theme.extend.animation, 'spin-slow': 'spin 3.5s linear infinite' };
+  </script>
+</body>
+</html> 
