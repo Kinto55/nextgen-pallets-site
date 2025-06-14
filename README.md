@@ -2,8 +2,6 @@
 
 **NextGen Pallets** is a modern, responsive landing page built for a fictional pallet logistics company. This project was created to showcase clean UI/UX, responsive web development, and strong frontend architecture using HTML, CSS, and JavaScript — optimized for both desktop and mobile.
 
-![Hero Preview](./IMG_0247.jpeg) <!-- Update path if needed -->
-
 ---
 
 ### 🚀 Live Preview  
